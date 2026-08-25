@@ -1,0 +1,10 @@
+jwt:
+  secretKey: ${JWT_SECRET}
+
+app:
+  security:
+    publicRoutes:
+      - /auth/signup
+      - /auth/login
+      - /webhooks/payment
+      - /actuator/**

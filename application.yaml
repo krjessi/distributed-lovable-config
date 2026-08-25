@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: ${spring.application.name}
+
+server:
+  forward-headers-strategy: framework

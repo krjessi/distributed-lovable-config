@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://pgvector:5432/intelligence_db
+    username: intelligence_user
+    password: ${INTELLIGENCE_DB_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  kafka:
+    bootstrap-servers: kafka:9092
+
+  ai:
+    openai:
+      api-key: ${AI_API_KEY}
+
+jwt:
+  secretKey: ${JWT_SECRET}
