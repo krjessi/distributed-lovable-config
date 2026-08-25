@@ -20,3 +20,10 @@ stripe:
 app:
   frontend:
     url: ${APP_FRONTEND_URL}
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery-service.lovable-core.svc.cluster.local:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
