@@ -15,3 +15,12 @@ eureka:
       defaultZone: http://discovery-service.lovable-core.svc.cluster.local:8761/eureka/
     register-with-eureka: true
     fetch-registry: true
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: account-service
+          uri: lb://ACCOUNT-SERVICE
+          predicates:
+            - Path=/auth/**
