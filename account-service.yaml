@@ -9,7 +9,7 @@ spring:
       ddl-auto: update
 
 jwt:
-  secret-key: $(JWT_SECRET)
+  secret-key: ${JWT_SECRET}
 
 stripe:
   api:
