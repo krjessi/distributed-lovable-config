@@ -24,3 +24,12 @@ spring:
           uri: lb://ACCOUNT-SERVICE
           predicates:
             - Path=/auth/**
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - health
+          - info
+          - gateway
