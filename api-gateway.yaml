@@ -19,11 +19,13 @@ eureka:
 spring:
   cloud:
     gateway:
-      routes:
-        - id: account-service
-          uri: lb://ACCOUNT-SERVICE
-          predicates:
-            - Path=/auth/**
+      server:
+        webflux:
+          routes:
+            - id: account-service
+              uri: lb://ACCOUNT-SERVICE
+              predicates:
+                - Path=/auth/**
 
 management:
   endpoints:
