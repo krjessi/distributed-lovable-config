@@ -22,6 +22,8 @@ app:
     url: ${APP_FRONTEND_URL}
 
 eureka:
+  instance:
+    prefer-ip-address: true
   client:
     service-url:
       defaultZone: http://discovery-service.lovable-core.svc.cluster.local:8761/eureka/
