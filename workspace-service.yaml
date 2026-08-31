@@ -29,3 +29,12 @@ app:
     namespace: ${PREVIEW_NAMESPACE}
     domain: ${PREVIEW_DOMAIN}
     proxy-port: ${PROXY_PORT}
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://discovery-service.lovable-core.svc.cluster.local:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
