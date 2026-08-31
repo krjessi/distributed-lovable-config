@@ -16,7 +16,7 @@ spring:
   kafka:
     bootstrap-servers: kafka:9092
 
-  jwt:
+jwt:
     secret-key: ${JWT_SECRET}
 
 minio:
